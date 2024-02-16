@@ -61,15 +61,15 @@ async function createCocktailElement(cocktail) {
     const detailData = await detailResponse.json();
     const drink = detailData.drinks[0];
 
-    const instructions = document.createElement("p");
-    instructions.textContent = `Instructions: ${drink.strInstructions}`;
-    cocktailElement.appendChild(instructions);
-
     const ingredientsList = document.createElement("ul");
     ingredientsList.classList.add("ingredients");
     cocktailElement.appendChild(ingredientsList);
 
-    for (let i = 1; i <= 15; i++) {
+    const instructions = document.createElement("p");
+    instructions.textContent = `Instructions: ${drink.strInstructions}`;
+    cocktailElement.appendChild(instructions);
+
+    for (let i = 1; i <= 50; i++) {
         const ingredient = `strIngredient${i}`;
         const measure = `strMeasure${i}`;
         if (drink[ingredient] && drink[ingredient].trim() !== "") {
