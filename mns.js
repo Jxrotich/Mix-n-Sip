@@ -89,3 +89,20 @@ async function createCocktailElement(cocktail) {
 
     resultsContainer.appendChild(cocktailElement);
 }
+// Random Drink Generator
+const randomDrink = document.getElementById("random-drink");
+
+randomDrink.addEventListener("click", async () => {
+    const randomUrl = `${baseUrl}random.php`;
+
+    try {
+        const response = await fetch(randomUrl);
+        const data = await response.json();
+
+        resultsContainer.innerHTML = "";
+        const cocktail = data.drinks[0];
+        createCocktailElement(cocktail);
+    } catch (error) {
+        resultsContainer.innerHTML = `＞︿＜ An error occurred: ${error.message}`;
+    }
+});
