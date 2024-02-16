@@ -71,7 +71,15 @@ button {
 }
 
 .cocktail ul {
-    list-style-type: none;
+    list-style: circle;
     padding: 0;
 }
+.like-button {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #F3D3BD;
+    color: #F3D3BD;
+    padding: 5px 10px;
+    cursor: pointer;
 
+}

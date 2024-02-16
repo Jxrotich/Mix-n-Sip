@@ -60,6 +60,10 @@ async function createCocktailElement(cocktail) {
     const detailResponse = await fetch(`${baseUrl}lookup.php?i=${cocktail.idDrink}`);
     const detailData = await detailResponse.json();
     const drink = detailData.drinks[0];
+    
+    const ingredientText = document.createElement("h5");
+    ingredientText.textContent = "Ingredients";
+    cocktailElement.appendChild(ingredientText);
 
     const ingredientsList = document.createElement("ul");
     ingredientsList.classList.add("ingredients");
@@ -74,7 +78,7 @@ async function createCocktailElement(cocktail) {
         const measure = `strMeasure${i}`;
         if (drink[ingredient] && drink[ingredient].trim() !== "") {
             const ingredientItem = document.createElement("li");
-            ingredientItem.textContent = `${drink[measure]} ${drink[ingredient]}`;
+            ingredientItem.textContent = `${drink[measure] ? drink[measure] : ""} ${drink[ingredient]}`;
             ingredientsList.appendChild(ingredientItem);
         }
     }
