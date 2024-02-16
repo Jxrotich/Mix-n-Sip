@@ -7,17 +7,23 @@
   <link rel="stylesheet" href="mns.css">
 </head>
 <body>
-  <h1>Mix n Sip</h1>
-  <h1>Explore Delicious Cocktails</h1>
-    <form id="search-box">
-        <input type="text" id="query" placeholder="Search for a cocktail">
-        <button type="submit">Search</button>
-    </form>
+  <h1>Cocktail Search</h1>
+
+  <form id="search-box">
+    <label for="query">Search for drinks:</label>
+    <input type="text" id="query" name="query" placeholder="Enter keyword">
+    
+    <select id="filter-select">
+      <option value="All">All Drinks</option>
+      <option value="Alcoholic">Alcoholic Only</option>
+      <option value="Non_Alcoholic">Non-Alcoholic Only</option>
+    </select>
+    
+    <button type="submit">Search</button>
+  </form>
 
   <div id="results"></div>
-  
-  
 
-    <script src="mns.js"></script>
+  <script src="mns.js"></script>
 </body>
 </html>
