@@ -21,7 +21,7 @@ searchBox.addEventListener("submit", async (event) => {
         resultsContainer.innerHTML = "";
         const cocktails = data.drinks;
         if (!cocktails) {
-            resultsContainer.innerHTML = "We don't have that for now. Try searching for something else?";
+            resultsContainer.innerHTML = "We don't have that for now🙃. Try searching for something else?";
             return;
         }
 
@@ -37,6 +37,44 @@ searchBox.addEventListener("submit", async (event) => {
         console.error(error);
     }
 });
+
+// Search Options
+searchBox.addEventListener("input", handleInput);
+
+async function handleInput(event) {
+    const query = event.target.value;
+    if (!query) return;
+
+    const searchUrl = `${baseUrl}search.php?s=${query}`;
+
+    try {
+        const data = await fetchData(searchUrl);
+        updateResults(data.drinks);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function fetchData(url) {
+    const response = await fetch(url);
+    return await response.json();
+}
+
+function updateResults(cocktails) {
+    resultsContainer.innerHTML = "";
+
+    if (!cocktails) {
+        resultsContainer.innerHTML = "Doesn't exist at the moment.";
+        return;
+    }
+    cocktails.forEach(createResultItem);
+}
+
+function createResultItem(cocktail) {
+    const resultItem = document.createElement("p");
+    resultItem.textContent = cocktail.strDrink;
+    resultsContainer.appendChild(resultItem);
+}
 
 // Cocktail Element
 async function createCocktailElement(cocktail) {
