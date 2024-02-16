@@ -69,8 +69,12 @@ async function createCocktailElement(cocktail) {
     ingredientsList.classList.add("ingredients");
     cocktailElement.appendChild(ingredientsList);
 
+    const instructionText = document.createElement("h5");
+    instructionText.textContent = "Instructions";
+    cocktailElement.appendChild(instructionText); 
+
     const instructions = document.createElement("p");
-    instructions.textContent = `Instructions: ${drink.strInstructions}`;
+    instructions.textContent = `${drink.strInstructions}`;
     cocktailElement.appendChild(instructions);
 
     for (let i = 1; i <= 50; i++) {
@@ -86,10 +90,10 @@ async function createCocktailElement(cocktail) {
     const likeButton = document.createElement("button");
     likeButton.classList.add("like-button");
     likeButton.dataset.liked = "false";
-    likeButton.textContent = "♡ Like";
+    likeButton.textContent = "♡";
     likeButton.addEventListener("click", () => {
         likeButton.dataset.liked = likeButton.dataset.liked === "false" ? "true" : "false";
-        likeButton.textContent = likeButton.dataset.liked === "true" ? "❤️ Liked" : "♡ Like";
+        likeButton.textContent = likeButton.dataset.liked === "true" ? "🩷" : "♡";
     });
     cocktailElement.appendChild(likeButton);
 
