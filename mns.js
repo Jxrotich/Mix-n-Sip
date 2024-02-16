@@ -1,9 +1,11 @@
-// Consts
+// API Link
 const baseUrl = "https://www.thecocktaildb.com/api/json/v1/1/";
 
+// Constant Elements
 const searchBox = document.getElementById("search-box");
 const resultsContainer = document.getElementById("results");
 const filterSelect = document.getElementById("filter-select");
+const randomDrink = document.getElementById("random-drink");
 
 // Search Box and Filter
 searchBox.addEventListener("submit", async (event) => {
@@ -90,8 +92,6 @@ async function createCocktailElement(cocktail) {
     resultsContainer.appendChild(cocktailElement);
 }
 // Random Drink Generator
-const randomDrink = document.getElementById("random-drink");
-
 randomDrink.addEventListener("click", async () => {
     const randomUrl = `${baseUrl}random.php`;
 
