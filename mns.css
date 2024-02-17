@@ -36,7 +36,7 @@ nav a:hover {
 }
 .intro {
     padding: 2px;
-    background-color: #5E5E5E;
+    background-color: #272727;
     color: #FCFAF9;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -44,9 +44,12 @@ nav a:hover {
     
 }
 
-h1 {
+h2 {
     text-align: center;
     font-size: 3em;
+}
+p {
+    text-align: center;
 }
 
 form {
