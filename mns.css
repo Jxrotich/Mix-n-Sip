@@ -7,6 +7,43 @@ body{
     color: #fcfaf9;
     } 
 
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color:#F3D3BD;
+    color: #272727;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+.logo img {
+    height: 30px;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #333333
+}
+
+nav a:hover {
+    color: #6AAE8A;
+}
+.intro {
+    padding: 2px;
+    background-color: #5E5E5E;
+    color: #FCFAF9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: small;
+    
+}
+
 h1 {
     text-align: center;
     font-size: 3em;
@@ -41,6 +78,10 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    
+}
+#random-drink:hover {
+    background-color: #6AAE8A;
 }
 
 #results {
@@ -87,9 +128,9 @@ button {
     background-color: transparent;
     border: 1px solid #F3D3BD;
     border-radius: 5px;
-    color: #F3D3BD;
+    color: #FCFAF9;
     padding: auto;
-    cursor: pointer;
+    
 }
 footer {
     margin-top: auto;
