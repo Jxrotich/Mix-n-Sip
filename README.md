@@ -1,6 +1,6 @@
 # Mix 'n Sip 🍹
 
-Mix 'n Sip is a cocktail and mocktails recipe finder that allows users to explore a vast collection of recipes. Users can search for drinks by name and filter the results based on whether they are alcoholic or non-alcoholic. The application displays the image, name, ingredients and instructions for each drink.
+Mix 'n Sip is a cocktail and mocktail recipe finder that allows users to explore a vast collection of recipes. Users can search for drinks by name and filter the results based on whether they are alcoholic or non-alcoholic. The application displays the image, name, ingredients and instructions for each drink.
 
 ## Table of Contents
 - Features
