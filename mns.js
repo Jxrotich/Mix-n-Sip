@@ -26,7 +26,7 @@ searchBox.addEventListener("submit", async (event) => {
         resultsContainer.innerHTML = "";
         const cocktails = data.drinks;
         if (!cocktails) {
-            resultsContainer.innerHTML = "We don't have that for now🙃. Try searching for something else?";
+            resultsContainer.innerHTML = "We don't have that🙃. Try searching for something else";
             return;
         }
 
