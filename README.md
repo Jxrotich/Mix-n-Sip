@@ -38,7 +38,7 @@ Mix 'n Sip is a cocktail and mocktail recipe finder that allows users to explore
 Data was fetched from the public API "https://www.thecocktaildb.com/api.php"
 
 ## Contributing 🤝
-Contributions, issues, and feature requests are welcome! Feel free to check issues page.
+Contributions, issues, and feature requests are welcome!
 
 ## Author
 Done by Cindy Jerotich
